@@ -1,8 +1,8 @@
 ClinicalTrialEligibilityChecker
-==================
+===============================
 
-ClinicalTrialEligibilityChecker is an end-to-end clinical trial eligibility assessment
-system designed to support both automated relevance scoring and
+ClinicalTrialEligibilityChecker is an end-to-end clinical trial eligibility
+assessment system designed to support both automated relevance scoring and
 clinician-facing interpretability.
 
 The system integrates large language models, neural ranking models,
@@ -14,11 +14,11 @@ SYSTEM OVERVIEW
 ---------------
 ClinicalTrialEligibilityChecker consists of two main components:
 
-1. ClinicalTrialEligibilityChecker_Server
+1. ClinicalTrialEligibilityChecker_Server  
    A FastAPI-based inference server that exposes REST APIs for
    eligibility scoring, explanation generation, and batch evaluation.
 
-2. ClinicalTrialEligibilityChecker_Client
+2. ClinicalTrialEligibilityChecker_Client  
    A Streamlit-based client application that allows clinicians
    and researchers to interact with the system through a
    user-friendly interface.
@@ -28,18 +28,19 @@ ARCHITECTURE
 ------------
 
 Client (Streamlit UI)
-    |
-    | REST API calls
-    v
+        |
+        | REST API calls
+        v
 Server (FastAPI)
-    |
-    | Model inference
-    v
+        |
+        | Model inference
+        v
 NEUREQ and TCH_CLF Models
-    |
-    | Structured audit logs
-    v
+        |
+        | Structured audit logs
+        v
 Persistent JSON Logs
+
 
 The client and server are intentionally decoupled to allow:
 - Independent deployment
@@ -110,8 +111,8 @@ SETUP AND EXECUTION
 Refer to the README files inside each subdirectory for
 component-specific setup and execution instructions:
 
-- ClinicalTrialEligibilityChecker_Server/readme.md
-- ClinicalTrialEligibilityChecker_Client/readme.md
+- ClinicalTrialEligibilityChecker_Server/README.txt
+- ClinicalTrialEligibilityChecker_Client/README.txt
 
 
 INTENDED USE
@@ -130,4 +131,3 @@ LICENSE
 Internal research use only.
 Contact the authors for redistribution, clinical deployment,
 or commercial use permissions.
-
