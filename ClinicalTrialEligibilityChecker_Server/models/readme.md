@@ -1,15 +1,16 @@
 Models Directory
 ================
 
-This directory contains all trained model checkpoints used by the
-EligibilityChecker inference server.
+This directory is expected to contain all trained model checkpoints used by
+the ClinicalTrialEligibilityChecker inference server.
 
-The models stored here are loaded by the server at runtime and are
-required for both single and batch eligibility evaluation.
+Due to file size constraints, model checkpoint files are not stored directly
+in this repository. They must be downloaded separately and placed in this
+directory before running the server.
 
 
-CONTENTS
---------
+REQUIRED MODEL FILES
+--------------------
 
 neureq_best.pt
 --------------
@@ -27,21 +28,38 @@ best_teacher_alpha0.2.pt
 - Designed to align with the offline teacher model used during training.
 
 
+MODEL DOWNLOAD
+--------------
+The official trained model checkpoints are hosted externally due to size
+limitations.
+
+Download links:
+- Google Drive: <[LINK HERE](https://drive.google.com/drive/folders/1ILcOmIajQxNttBvBqRX1CFtTA4V9KVug?usp=sharing)>
+
+After downloading, place the files in this directory:
+
+ClinicalTrialEligibilityChecker_Server/models/
+
+Ensure that filenames exactly match those expected by the server.
+
+
 MODEL USAGE
 -----------
-- Models are loaded by the server during startup or on first use.
-- NEUREQ model is always loaded at startup (CPU-safe and lightweight).
-- TCH_CLF model is lazy-loaded to conserve memory and GPU resources.
-- Model paths are defined in server.py and can be updated as needed.
+- Models are loaded by the server at runtime.
+- The NEUREQ model is loaded at server startup (CPU-safe and lightweight).
+- The TCH_CLF model is lazy-loaded on first use to conserve memory and GPU
+  resources.
+- Model paths are defined in server.py and should not be changed unless
+  filenames are updated accordingly.
 
 
 COMPATIBILITY
 -------------
-- The NEUREQ model expects a 10 × 1 input tensor corresponding to
-  ternary eligibility responses.
-- The TCH_CLF model expects tokenized input compatible with the
-  Clinical Longformer tokenizer.
-- Model checkpoints are not interchangeable across architectures.
+- The NEUREQ model expects a 10 × 1 input tensor corresponding to ternary
+  eligibility responses.
+- The TCH_CLF model expects tokenized input compatible with the Clinical
+  Longformer tokenizer.
+- Model checkpoints are architecture-specific and not interchangeable.
 
 
 REPRODUCIBILITY
@@ -56,8 +74,8 @@ NOTES
 -----
 - Do not rename model files without updating paths in server.py.
 - Do not modify model files unless retraining is intended.
-- For archival or versioned experiments, copy this directory rather
-  than overwriting existing checkpoints.
+- For archival or versioned experiments, copy this directory rather than
+  overwriting existing checkpoints.
 
 
 LICENSE
