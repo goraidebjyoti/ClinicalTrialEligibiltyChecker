@@ -90,10 +90,12 @@ All evaluations generate structured JSON audit logs containing:
 
 Logs are organized under:
 
+```text
 audit_logs/
   neureq/
   tch_clf/
   batch/
+```
 
 Batch evaluation logs reference the corresponding single-evaluation
 audit files to ensure full traceability.
@@ -115,6 +117,7 @@ RUNNING THE SERVER
 Start the server using:
 
 uvicorn server:app --host 0.0.0.0 --port 8000 --workers 1
+or run "bash run_server.sh"
 
 A single worker is recommended to preserve GPU safety and
 deterministic execution.
