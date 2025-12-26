@@ -68,7 +68,7 @@ ClinicalTrialEligibilityChecker_Server/models/
 Instructions and download links for the official model checkpoints are
 provided in:
 
-ClinicalTrialEligibilityChecker_Server/models/README.txt
+ClinicalTrialEligibilityChecker_Server/models/readme.md
 
 
 ## Batch Evaluation
@@ -99,15 +99,15 @@ ClinicalTrialEligibilityChecker/
 │   ├── server.py
 │   ├── models/
 │   ├── audit_logs/
-│   └── README.txt
+│   └── readme.md
 │
 ├── ClinicalTrialEligibilityChecker_Client/
 │   ├── app.py
 │   ├── assets/
 │   ├── config.json
-│   └── README.txt
+│   └── readme.md
 │
-└── README.md
+└── readme.md
 ```
 
 ## Setup and Execution
@@ -115,8 +115,8 @@ ClinicalTrialEligibilityChecker/
 Refer to the README files inside each subdirectory for
 component-specific setup and execution instructions:
 
-- ClinicalTrialEligibilityChecker_Server/README.txt
-- ClinicalTrialEligibilityChecker_Client/README.txt
+- ClinicalTrialEligibilityChecker_Server/readme.md
+- ClinicalTrialEligibilityChecker_Client/readme.md
 
 ## Intended Use
 
@@ -133,3 +133,4 @@ It is not intended to replace clinical judgment.
 Internal research use only.  
 Contact the authors for redistribution, clinical deployment,
 or commercial use permissions.
+
