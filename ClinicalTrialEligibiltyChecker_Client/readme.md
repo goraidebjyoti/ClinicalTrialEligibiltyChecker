@@ -117,12 +117,15 @@ the client application.
 
 DIRECTORY STRUCTURE
 -------------------
+
+```text
 assets/
   logo.png
 
 app.py
 config.json
-
+readme.md (this file)
+```
 
 NOTES
 -----
