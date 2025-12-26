@@ -1,5 +1,4 @@
-ClinicalTrialEligibilityChecker
-===============================
+# ClinicalTrialEligibilityChecker
 
 ClinicalTrialEligibilityChecker is an end-to-end clinical trial eligibility
 assessment system designed to support both automated relevance scoring and
@@ -9,63 +8,53 @@ The system integrates large language models, neural ranking models,
 and a web-based user interface to enable transparent, reproducible,
 and scalable patient–trial matching.
 
+## SYSTEM OVERVIEW
 
-SYSTEM OVERVIEW
----------------
 ClinicalTrialEligibilityChecker consists of two main components:
 
-1. ClinicalTrialEligibilityChecker_Server  
+1. **ClinicalTrialEligibilityChecker_Server**  
    A FastAPI-based inference server that exposes REST APIs for
    eligibility scoring, explanation generation, and batch evaluation.
 
-2. ClinicalTrialEligibilityChecker_Client  
+2. **ClinicalTrialEligibilityChecker_Client**  
    A Streamlit-based client application that allows clinicians
    and researchers to interact with the system through a
    user-friendly interface.
 
-
-ARCHITECTURE
-------------
-
+## ARCHITECTURE
 Client (Streamlit UI)
-        |
-        | REST API calls
-        v
+|
+| REST API calls
+v
 Server (FastAPI)
-        |
-        | Model inference
-        v
+|
+| Model inference
+v
 NEUREQ and TCH_CLF Models
-        |
-        | Structured audit logs
-        v
+|
+| Structured audit logs
+v
 Persistent JSON Logs
-
-The client and server are intentionally decoupled to allow:
+textThe client and server are intentionally decoupled to allow:
 - Independent deployment
 - Easier auditing and debugging
 - Future replacement or extension of models or UI components
 
+## MODELS
 
-MODELS
-------
-
-NEUREQ
-------
+### NEUREQ
 - Question-driven eligibility modeling framework.
 - Uses a fixed 10-question schema capturing core eligibility dimensions.
 - Each question produces a ternary response (YES / NO / NA) with justification.
 - Responses are scored using a trained neural model.
 
-TCH_CLF
--------
+### TCH_CLF
 - Teacher Longformer-based clinical trial reranker.
 - Extracts structured trial attributes (age, gender, conditions, criteria).
 - Produces a relevance score with optional deterministic reasoning.
 
+## BATCH EVALUATION
 
-BATCH EVALUATION
-----------------
 The system supports batch evaluation where:
 - Multiple patient cases are evaluated against multiple trials.
 - Execution is sequential and GPU-safe.
@@ -73,9 +62,8 @@ The system supports batch evaluation where:
 - Partial results are available before batch completion.
 - All explanations are served from cached audit logs.
 
+## AUDITABILITY AND REPRODUCIBILITY
 
-AUDITABILITY AND REPRODUCIBILITY
---------------------------------
 ClinicalTrialEligibilityChecker emphasizes clinical transparency by:
 - Logging all intermediate representations
 - Storing deterministic seeds for reproducibility
@@ -85,10 +73,7 @@ ClinicalTrialEligibilityChecker emphasizes clinical transparency by:
 All logs are stored as structured JSON files and can be inspected
 independently of the client application.
 
-
-DIRECTORY STRUCTURE
--------------------
-
+## DIRECTORY STRUCTURE
 ClinicalTrialEligibilityChecker/
 ├── ClinicalTrialEligibilityChecker_Server/
 │   ├── server.py
@@ -102,20 +87,17 @@ ClinicalTrialEligibilityChecker/
 │   ├── config.json
 │   └── README.txt
 │
-└── README.txt   (this file)
+└── README.md   (this file)
+text## SETUP AND EXECUTION
 
-
-SETUP AND EXECUTION
--------------------
 Refer to the README files inside each subdirectory for
 component-specific setup and execution instructions:
 
-- ClinicalTrialEligibilityChecker_Server/README.txt
-- ClinicalTrialEligibilityChecker_Client/README.txt
+- [ClinicalTrialEligibilityChecker_Server/README.txt](ClinicalTrialEligibilityChecker_Server/README.txt)
+- [ClinicalTrialEligibilityChecker_Client/README.txt](ClinicalTrialEligibilityChecker_Client/README.txt)
 
+## INTENDED USE
 
-INTENDED USE
-------------
 This system is intended for:
 - Clinical trial eligibility research
 - Model evaluation and benchmarking
@@ -124,9 +106,8 @@ This system is intended for:
 
 It is not intended to replace clinical judgment.
 
+## LICENSE
 
-LICENSE
--------
 Internal research use only.
 Contact the authors for redistribution, clinical deployment,
 or commercial use permissions.
