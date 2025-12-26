@@ -2,7 +2,7 @@ Assets Directory
 ================
 
 This directory contains static assets used by the
-EligibilityChecker client application.
+ClinicalTrialEligibilityChecker client application.
 
 Assets in this folder are loaded by the Streamlit-based user interface
 and are not involved in any model inference or data processing logic.
@@ -15,7 +15,7 @@ logo.png
 --------
 - Official logo used in the client user interface.
 - Displayed in the application header and browser tab icon.
-- Used to visually identify the EligibilityChecker system.
+- Used to visually identify the ClinicalTrialEligibilityChecker system.
 
 
 USAGE
