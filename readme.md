@@ -8,7 +8,7 @@ The system integrates large language models, neural ranking models,
 and a web-based user interface to enable transparent, reproducible,
 and scalable patient–trial matching.
 
-## SYSTEM OVERVIEW
+## System Overview
 
 ClinicalTrialEligibilityChecker consists of two main components:
 
@@ -21,26 +21,29 @@ ClinicalTrialEligibilityChecker consists of two main components:
    and researchers to interact with the system through a
    user-friendly interface.
 
-## ARCHITECTURE
-Client (Streamlit UI)
-|
-| REST API calls
-v
-Server (FastAPI)
-|
-| Model inference
-v
-NEUREQ and TCH_CLF Models
-|
-| Structured audit logs
-v
-Persistent JSON Logs
-textThe client and server are intentionally decoupled to allow:
+## Architecture
+
+The system follows a clean client–server architecture:
+
+- **Client (Streamlit UI)**  
+  Handles user interaction, visualization, and clinician-facing workflows.
+
+- **Server (FastAPI)**  
+  Exposes REST APIs and orchestrates model inference.
+
+- **Model Layer**  
+  - NEUREQ neural eligibility model  
+  - TCH_CLF teacher Longformer reranker  
+
+- **Audit Layer**  
+  Structured JSON logs persisted for traceability and inspection.
+
+The client and server are intentionally decoupled to allow:
 - Independent deployment
 - Easier auditing and debugging
 - Future replacement or extension of models or UI components
 
-## MODELS
+## Models
 
 ### NEUREQ
 - Question-driven eligibility modeling framework.
@@ -53,7 +56,7 @@ textThe client and server are intentionally decoupled to allow:
 - Extracts structured trial attributes (age, gender, conditions, criteria).
 - Produces a relevance score with optional deterministic reasoning.
 
-## BATCH EVALUATION
+## Batch Evaluation
 
 The system supports batch evaluation where:
 - Multiple patient cases are evaluated against multiple trials.
@@ -62,7 +65,7 @@ The system supports batch evaluation where:
 - Partial results are available before batch completion.
 - All explanations are served from cached audit logs.
 
-## AUDITABILITY AND REPRODUCIBILITY
+## Auditability and Reproducibility
 
 ClinicalTrialEligibilityChecker emphasizes clinical transparency by:
 - Logging all intermediate representations
@@ -73,7 +76,9 @@ ClinicalTrialEligibilityChecker emphasizes clinical transparency by:
 All logs are stored as structured JSON files and can be inspected
 independently of the client application.
 
-## DIRECTORY STRUCTURE
+## Directory Structure
+
+```text
 ClinicalTrialEligibilityChecker/
 ├── ClinicalTrialEligibilityChecker_Server/
 │   ├── server.py
@@ -87,16 +92,18 @@ ClinicalTrialEligibilityChecker/
 │   ├── config.json
 │   └── README.txt
 │
-└── README.md   (this file)
-text## SETUP AND EXECUTION
+└── README.md
+```
+
+## Setup and Execution
 
 Refer to the README files inside each subdirectory for
 component-specific setup and execution instructions:
 
-- [ClinicalTrialEligibilityChecker_Server/README.txt](ClinicalTrialEligibilityChecker_Server/README.txt)
-- [ClinicalTrialEligibilityChecker_Client/README.txt](ClinicalTrialEligibilityChecker_Client/README.txt)
+- ClinicalTrialEligibilityChecker_Server/README.txt
+- ClinicalTrialEligibilityChecker_Client/README.txt
 
-## INTENDED USE
+## Intended Use
 
 This system is intended for:
 - Clinical trial eligibility research
@@ -106,8 +113,8 @@ This system is intended for:
 
 It is not intended to replace clinical judgment.
 
-## LICENSE
+## License
 
-Internal research use only.
+Internal research use only.  
 Contact the authors for redistribution, clinical deployment,
 or commercial use permissions.
