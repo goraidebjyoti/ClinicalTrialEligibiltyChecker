@@ -41,7 +41,6 @@ NEUREQ and TCH_CLF Models
         v
 Persistent JSON Logs
 
-
 The client and server are intentionally decoupled to allow:
 - Independent deployment
 - Easier auditing and debugging
