@@ -110,8 +110,8 @@ SETUP AND EXECUTION
 Refer to the README files inside each subdirectory for
 component-specific setup and execution instructions:
 
-- ClinicalTrialEligibilityChecker_Server/README.txt
-- ClinicalTrialEligibilityChecker_Client/README.txt
+- ClinicalTrialEligibilityChecker_Server/readme.md
+- ClinicalTrialEligibilityChecker_Client/readme.md
 
 
 INTENDED USE
@@ -130,3 +130,4 @@ LICENSE
 Internal research use only.
 Contact the authors for redistribution, clinical deployment,
 or commercial use permissions.
+
