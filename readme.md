@@ -56,6 +56,21 @@ The client and server are intentionally decoupled to allow:
 - Extracts structured trial attributes (age, gender, conditions, criteria).
 - Produces a relevance score with optional deterministic reasoning.
 
+## Model Checkpoints
+
+Trained model checkpoint files are not included in this repository due to
+size constraints.
+
+The inference server expects the required `.pt` files to be present under:
+
+ClinicalTrialEligibilityChecker_Server/models/
+
+Instructions and download links for the official model checkpoints are
+provided in:
+
+ClinicalTrialEligibilityChecker_Server/models/README.txt
+
+
 ## Batch Evaluation
 
 The system supports batch evaluation where:
