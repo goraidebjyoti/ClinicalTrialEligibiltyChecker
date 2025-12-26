@@ -64,10 +64,12 @@ Patient TSV File
 Trial JSON Files
 ----------------
 - Each file must contain:
-    {
+   ```text
+  {
       "trial_id": "<ID>",
       "trial_text": "<full trial description>"
-    }
+   }
+   ```
 - Maximum: 50 trials per batch.
 
 
