@@ -177,18 +177,18 @@ Refer to the README files inside each subdirectory for
 component-specific setup and execution instructions:
 
 ```text
--ClinicalTrialEligibilityChecker_Server/readme.md
--ClinicalTrialEligibilityChecker_Client/readme.md
+ClinicalTrialEligibilityChecker_Server/readme.md
+ClinicalTrialEligibilityChecker_Client/readme.md
 ```
 ---
 
 ## Intended Use
 
 This system is intended for:
--Clinical trial eligibility research
--Model evaluation and benchmarking
--Decision-support prototyping
--Human-in-the-loop eligibility inspection
+- Clinical trial eligibility research
+- Model evaluation and benchmarking
+- Decision-support prototyping
+- Human-in-the-loop eligibility inspection
 
 It is not intended to replace clinical judgment.
 
@@ -197,3 +197,4 @@ It is not intended to replace clinical judgment.
 Internal research use only.
 Contact the authors for redistribution, clinical deployment,
 or commercial use permissions.
+
