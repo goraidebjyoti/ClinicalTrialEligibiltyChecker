@@ -175,10 +175,10 @@ ClinicalTrialEligibilityChecker/
 
 Refer to the README files inside each subdirectory for
 component-specific setup and execution instructions:
-
+```text
 -ClinicalTrialEligibilityChecker_Server/readme.md
 -ClinicalTrialEligibilityChecker_Client/readme.md
-
+```
 ---
 
 ## Intended Use
@@ -196,3 +196,4 @@ It is not intended to replace clinical judgment.
 Internal research use only.
 Contact the authors for redistribution, clinical deployment,
 or commercial use permissions.
+
