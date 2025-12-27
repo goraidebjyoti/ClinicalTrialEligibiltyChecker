@@ -84,12 +84,12 @@ size constraints.
 
 The inference server expects the required `.pt` files to be present under:
 
-ClinicalTrialEligibilityChecker_Server/models/
+`ClinicalTrialEligibilityChecker_Server/models/`
 
 Instructions and download links for the official model checkpoints are
 provided in:
 
-ClinicalTrialEligibilityChecker_Server/models/readme.md
+`ClinicalTrialEligibilityChecker_Server/models/readme.md`
 
 ---
 
@@ -175,6 +175,7 @@ ClinicalTrialEligibilityChecker/
 
 Refer to the README files inside each subdirectory for
 component-specific setup and execution instructions:
+
 ```text
 -ClinicalTrialEligibilityChecker_Server/readme.md
 -ClinicalTrialEligibilityChecker_Client/readme.md
@@ -196,4 +197,3 @@ It is not intended to replace clinical judgment.
 Internal research use only.
 Contact the authors for redistribution, clinical deployment,
 or commercial use permissions.
-
